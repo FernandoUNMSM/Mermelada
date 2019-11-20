@@ -1,0 +1,479 @@
+:root {
+    --naranja: #ffae00;
+    --plomo: #1f191b;
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+}
+*::selection {
+    background-color: var(--naranja);
+}
+/*---------------------*/
+/* PRE-LOADER */
+/*---------------------*/
+/* 
+.pre-loader {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+    z-index: 1000;
+    color: white;
+    text-align: right;
+}
+.pre-loader .inferior, .pre-loader .superior {
+    background-color: var(--plomo);
+    position: relative;
+    height: 50%;
+    animation-duration: 3s; 
+}
+
+.pre-loader .inferior {
+    right: -100%;
+    animation-name: inferior;
+} */
+@keyframes inferior {
+    from {
+        right: 0;
+    }
+    to {
+        right: -100%;
+    }
+}
+
+.pre-loader .superior {
+    left: -100%;
+    animation-name: superior;
+}
+@keyframes superior {
+    from {
+        left: 0;
+    }
+    to {
+        left: -100%;
+    }
+}
+
+/*---------------------*/
+/* MENU */  
+/*---------------------*/
+.menu-container-fluid {
+    width: 100%;
+    height: fit-content;
+    position: absolute;
+    position: fixed;
+    /* background-color: var(--plomo); */
+    /* border-bottom: 4px solid var(--naranja); */
+    z-index: 900;
+    user-select: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: .3s
+}
+.menu-container-fluid .titulo-menu h1{
+    letter-spacing: 2px;
+    font-family: "Bree Serif", serif;
+    opacity: 0;
+    transition: .3s;
+    background: linear-gradient(to right, rgb(230, 161, 13) 5%, #f1cf09 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.menu-container {
+    display: flex;
+    justify-content: flex-end;
+    max-width: 1200px;
+}
+.menu-container .menu ul{
+    display: flex;
+    flex-direction: row;
+    margin: 20px 20px;
+}
+.menu-container .menu .menu-item {
+    margin: 0 10px;
+    list-style: none;
+}
+.menu-container .menu ul .item-a{
+    color: white;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8em;
+    font-weight: 400;
+}
+.menu-container .menu ul .item-a i{
+    font-size: 1.3em;
+}
+.menu-container .menu-item:hover .item-a{
+    color: var(--naranja);
+}
+
+/*---------------------*/
+/* HEADER */
+/*---------------------*/
+
+.header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/mermetoci.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Montserrat', sans-serif;
+}
+.header-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(0,0,0,.4);
+}
+.header-container .texto-header {
+   color: white;
+   margin: auto;
+   padding: 0px 20px;
+}
+.header-container .texto-header h2{
+    background-color: #000;
+    font-weight: 200;
+    width: max-content;
+    margin: auto;
+    position: relative;
+    padding: 5px 30px;
+}
+.header-container .texto-header h2::after,.header-container .texto-header h2::before{
+    content: '';
+    display: block;
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    top: calc(50% - 3px);
+    left: 10px;
+    transform: rotate(45deg);
+    background-color: var(--naranja);
+}
+.header-container .texto-header h2::before{
+    right: 10px;
+    left: initial;
+}
+.header-container .texto-header h1{
+    font-size: 4em;
+}
+.header-container .texto-header .icon {
+    position: relative;
+    margin: 20px 0;
+}
+.header-container .texto-header .icono {
+    width: max-content;
+    margin: auto;
+}
+.header-container .texto-header .icono::before, .header-container .texto-header .icono::after{
+    content: ' ';
+    display: block;
+    position: absolute;
+    width: 45%;
+    top: 45%;
+    border-top: 3px dotted white;
+}
+.header-container .texto-header .icono::before{
+    right: 0;
+}
+.header-container .texto-header .icono::after{
+    left: 0;
+}
+.header-container .texto-header p{
+    font-size: 1.7em;
+}
+.header-container .texto-header p span {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--naranja);
+}
+
+/*---------------------*/
+/* Seccion Historia */
+/*---------------------*/
+
+.historia-container {
+    padding: 90px 0;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+}
+.historia-container .historia {
+    width: 70%;
+    margin: auto;
+}
+.historia-container .historia .fisi{
+    color: gray;
+    font-size: 1.8em;
+    font-weight: 200;
+}
+.historia-container .historia .titulo {
+    height: 30%;
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    font-size: 2em;
+    margin: 35px 0;
+}
+.historia-container .historia .titulo h1 {
+    white-space: pre-wrap;
+    font-weight: 300;
+}
+.historia-container .historia .titulo i{
+    color: var(--naranja);
+}
+.historia-container .historia .text{
+    color: gray;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+.historia-container .historia button {
+    border: 2px solid black;
+    background-color: #fff;
+    width: 200px;
+    height: 40px;
+    transition: .4s ease all;
+    cursor: pointer;
+}
+.historia-container .historia button:hover {
+    background-color: #000;
+    color: var(--naranja);
+}
+
+/*---------------------*/
+/* Separador */
+/*---------------------*/
+
+.separador {
+    background-image: url(../img/sepmerme2.jpg);
+    height: 350px;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 100px;
+    padding: 0 20px;
+}
+.separador .texto-container i{
+    background-color: #000;
+    color: var(--naranja);
+    font-size: 2em;
+    padding: 18px;
+    margin-bottom: 10px;
+}
+.separador .texto-container .texto > p{
+    background-color: #000;
+    color: white;
+    font-size: 1.5em;
+    width: fit-content;
+    padding: 10px 25px;
+}
+.separador .texto-container .texto > p:first-child{
+    font-family: "Playfair Display", serif;
+    font-size: 2em;
+}
+.separador .texto-container .texto > p:last-of-type{
+    margin-bottom: 20px;
+}
+.separador .texto-container .don {
+    display: flex;
+    justify-content: flex-end;
+}
+.separador .texto-container .don p{
+    width: max-content;
+    background-color: #000;
+    color: white;
+    padding: 5px 10px;
+}
+
+/*---------------------*/
+/* Galeria */
+/*---------------------*/
+
+.galeria-container {
+    max-width: 1200px;
+    padding: 0 30px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 100px;
+}
+.galeria-container .texto {
+    width: 40%;
+}
+.galeria-container .texto button {
+    border: 2px solid black;
+    border-right: none;
+    background-color: #fff;
+    width: 150px;
+    height: 35px;
+    cursor: pointer;
+    position: relative;
+    box-sizing: border-box;
+}
+.galeria-container .texto button::after {
+    content: '';
+    display: block;
+    width: 24.5px;
+    height: 22.5px;
+    position: absolute;
+    right: -14px;
+    top: 3px;
+    border-bottom: 2px solid black;    
+    border-right: 2px solid black;  
+    transform: rotate(-45deg);  
+}
+.galeria-container .texto button:hover {
+    background-color: #000;
+    color: var(--naranja);
+}
+.galeria-container .texto button:hover::after{
+    background-color: #000;
+    color: var(--naranja);
+}
+.galeria-container .texto h1 {
+    font-size: 1.6em;
+    font-weight: 200;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px dashed gray;
+}
+.galeria-container .texto p {
+    margin-bottom: 30px;
+}
+.galeria-container .galeria {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+.galeria-container .galeria div figure{
+    width: 200px;
+}
+.galeria-container .galeria div figure img{
+    width: 100%;
+}
+.galeria-container .galeria .inferior, .galeria-container .galeria .superior {
+    display: flex;
+    justify-content: space-between;
+    line-height: 0;
+}
+.galeria-container .galeria div > figure:last-of-type {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+/*---------------------*/
+/* Mapa */
+/*---------------------*/
+
+.mapa-container {
+    line-height: 0;
+    position: relative;
+    text-align: center;
+}
+.mapa-container .info-container {
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.7);
+    display: flex;
+    transition: .4s ease all;
+}
+.mapa-container .info-container .sombra {
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+.mapa-container .info-container .caja {
+    line-height: 1.5;
+    background-color: #000;
+    padding: 50px 25px;
+    margin-bottom: 90px;
+    transition: .4s ease all;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+.mapa-container .info-container .sombra .caja {
+    color: white;
+}
+.mapa-container .info-container .sombra .caja h1{
+    font-weight: 400;
+    width: 60%;
+    text-transform: uppercase;
+    margin: auto;
+    color: var(--naranja);
+    padding: 10px 20px;
+    border-bottom: 2px dotted #fff;
+    margin-bottom: 20px;
+}
+.mapa-container .info-container .sombra .caja p:first-of-type{
+    margin-bottom: 10px;
+}
+.mapa-container .info-container .sombra button{
+    border: 2px solid var(--naranja);
+    background-color: transparent;
+    color: white;
+    height: 40px;
+    width: 250px;
+    font-size: .9em;
+    font-weight: 200;
+    cursor: pointer;
+    transition: .4s ease all;
+    outline: none;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.mapa-container .info-container .sombra button:hover{
+    color: var(--naranja);
+}
+/* Mapa visible*/
+.mapa-container .info-0 {
+    height: 0;
+    line-height: 0;
+}
+.mapa-container .info-container .info-0 {
+    line-height: 0;
+    height: 0;
+    transform: translateY(-180%);
+}
+.mapa-container .info-container .sombra .button-on {
+    top: 30px;
+    background-color: var(--plomo);
+    border: 2px solid var(--plomo);
+}
+
+
+@media screen and (max-width: 750px) {
+    .galeria-container {
+        flex-direction: column-reverse;
+    }
+    .galeria-container .galeria {
+        margin-bottom: 50px;
+        width: 80%;
+    }
+    .galeria-container .texto {
+        width: 80%;
+    }
+    .separador .texto-container {
+        font-size: .7em;
+    }
+}
+@media screen and (max-width: 500px) {
+    .menu-container-fluid .titulo-menu h1 {
+        font-size: 1.5em;
+        width: min-content;
+    }
+}
+
