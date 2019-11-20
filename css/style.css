@@ -470,4 +470,10 @@
         font-size: .7em;
     }
 }
+@media screen and (max-width: 500px) {
+    .menu-container-fluid .titulo-menu h1 {
+        font-size: 1.5em;
+        width: min-content;
+    }
+}
 
