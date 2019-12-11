@@ -475,8 +475,5 @@
     }
 }
 @media screen and (max-width: 500px) {
-    .menu-container-fluid .titulo-menu {
-        display: none;
-    }
 }
 
