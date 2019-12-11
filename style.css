@@ -121,7 +121,6 @@
     background-image: url(../img/mermetoci.jpg);
     background-attachment: fixed;
     background-size: cover;
-    font-family: 'Montserrat', sans-serif;
 }
 .header-container {
     width: 100%;
@@ -144,6 +143,7 @@
     margin: auto;
     position: relative;
     padding: 5px 30px;
+    font-family: 'Indie Flower', cursive;
 }
 .header-container .texto-header h2::after,.header-container .texto-header h2::before{
     content: '';
@@ -162,6 +162,7 @@
 }
 .header-container .texto-header h1{
     font-size: 4em;
+    font-family: 'Indie Flower', cursive;
 }
 .header-container .texto-header .icon {
     position: relative;
@@ -187,11 +188,13 @@
 }
 .header-container .texto-header p{
     font-size: 1.7em;
+    /* font-family: 'Indie Flower', cursive; */
 }
 .header-container .texto-header p span {
     text-transform: uppercase;
     font-weight: 700;
     color: var(--naranja);
+    font-family: 'Indie Flower', cursive;
 }
 
 /*---------------------*/
@@ -471,9 +474,8 @@
     }
 }
 @media screen and (max-width: 500px) {
-    .menu-container-fluid .titulo-menu h1 {
-        font-size: 1.5em;
-        width: min-content;
+    .menu-container-fluid .titulo-menu {
+        display: none;
     }
 }
 
