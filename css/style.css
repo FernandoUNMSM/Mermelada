@@ -475,9 +475,6 @@
     }
 }
 @media screen and (max-width: 500px) {
-    .menu-container-fluid .titulo-menu {
-        
-    }
     .mapa-container .info-container .sombra .caja {
         padding: 50px 0;
     }
