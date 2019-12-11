@@ -478,4 +478,10 @@
     .menu-container-fluid .titulo-menu {
         display: none;
     }
+    .mapa-container .info-container .sombra .caja {
+        padding: 50px 0;
+    }
+    .mapa-container .info-container .sombra .caja h1 {
+        width: 70%;
+    }
 }
