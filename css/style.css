@@ -13,7 +13,7 @@
 /*---------------------*/
 /* PRE-LOADER */
 /*---------------------*/
-/* 
+
 .pre-loader {
     height: 100vh;
     width: 100%;
@@ -33,7 +33,7 @@
 .pre-loader .inferior {
     right: -100%;
     animation-name: inferior;
-} */
+}
 @keyframes inferior {
     from {
         right: 0;
@@ -74,8 +74,9 @@
     transition: .3s
 }
 .menu-container-fluid .titulo-menu h1{
-    letter-spacing: 2px;
-    font-family: "Bree Serif", serif;
+    letter-spacing: 2px;    
+    font-family: 'Indie Flower', cursive;
+    font-weight: 900;
     opacity: 0;
     transition: .3s;
     background: linear-gradient(to right, rgb(230, 161, 13) 5%, #f1cf09 80%);
@@ -121,7 +122,6 @@
     background-image: url(../img/mermetoci.jpg);
     background-attachment: fixed;
     background-size: cover;
-    font-family: 'Montserrat', sans-serif;
 }
 .header-container {
     width: 100%;
@@ -476,7 +476,7 @@
 }
 @media screen and (max-width: 500px) {
     .menu-container-fluid .titulo-menu {
-        display: none;
+        font-size: 1em;
     }
 }
 
